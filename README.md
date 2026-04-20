@@ -1,4 +1,4 @@
-# buchi-skills
+# skills
 
 Claude Code 用の Skill 集。
 
@@ -20,8 +20,8 @@ Claude Code 用の Skill 集。
 
 ```bash
 # ~/.claude/skills/ 配下にコピー
-git clone https://github.com/kuromame/buchi-skills.git /tmp/buchi-skills
-cp -R /tmp/buchi-skills/vercel-incident-2026-april ~/.claude/skills/
+git clone https://github.com/buchi-neko/skills.git /tmp/skills
+cp -R /tmp/skills/vercel-incident-2026-april ~/.claude/skills/
 ```
 
 ### `gh skill` 経由（将来対応予定）
@@ -29,7 +29,7 @@ cp -R /tmp/buchi-skills/vercel-incident-2026-april ~/.claude/skills/
 GitHub CLI の [`gh skill` コマンド](https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/)が利用可能になれば、バージョン固定・供給チェーン整合性チェック付きでインストールできる見込み。
 
 ```bash
-gh skill install kuromame/buchi-skills/vercel-incident-2026-april
+gh skill install buchi-neko/skills/vercel-incident-2026-april
 ```
 
 ## 使い方
