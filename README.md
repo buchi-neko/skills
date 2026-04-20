@@ -20,13 +20,30 @@ Claude Code 用の Skill 集。
 
 ### `gh skill` 経由（推奨）
 
-[GitHub CLI `gh skill` コマンド](https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/)を使うと、バージョン固定・供給チェーン整合性チェック付きでインストールできます。
+[GitHub CLI `gh skill` コマンド](https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/)（`gh >= 2.90`）を使うと、`github-tree-sha` による改ざん検知付きでインストールできます。
+
+**Claude Code ユーザー全体に適用（推奨・`~/.claude/skills/` にインストール）**:
 
 ```bash
-gh skill install buchi-neko/skills vercel-incident-2026-april
+gh skill install buchi-neko/skills vercel-incident-2026-april --agent claude-code --scope user
+```
+
+**特定プロジェクト内にのみ適用（`.claude/skills/` にインストール）**:
+
+```bash
+cd your-project/
+gh skill install buchi-neko/skills vercel-incident-2026-april --agent claude-code
+```
+
+インストール前に中身を確認したい場合:
+
+```bash
+gh skill preview buchi-neko/skills vercel-incident-2026-april
 ```
 
 ### 手動（Claude Code）
+
+`gh skill` が使えない場合:
 
 ```bash
 # ~/.claude/skills/ 配下にコピー
