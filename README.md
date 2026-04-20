@@ -14,7 +14,17 @@ Claude Code 用の Skill 集。
 - サービス別のローテ手順（GitHub OAuth, Resend, Google Cloud, reCAPTCHA, Supabase, Stripe 等）
 - 実戦で踏んだ罠のまとめ（`references/gotchas.md`）
 
+本リポジトリの Skill は [Agent Skills 仕様](https://agentskills.io/specification) に準拠しています。
+
 ## インストール
+
+### `gh skill` 経由（推奨）
+
+[GitHub CLI `gh skill` コマンド](https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/)を使うと、バージョン固定・供給チェーン整合性チェック付きでインストールできます。
+
+```bash
+gh skill install buchi-neko/skills vercel-incident-2026-april
+```
 
 ### 手動（Claude Code）
 
@@ -22,14 +32,6 @@ Claude Code 用の Skill 集。
 # ~/.claude/skills/ 配下にコピー
 git clone https://github.com/buchi-neko/skills.git /tmp/skills
 cp -R /tmp/skills/vercel-incident-2026-april ~/.claude/skills/
-```
-
-### `gh skill` 経由（将来対応予定）
-
-GitHub CLI の [`gh skill` コマンド](https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/)が利用可能になれば、バージョン固定・供給チェーン整合性チェック付きでインストールできる見込み。
-
-```bash
-gh skill install buchi-neko/skills/vercel-incident-2026-april
 ```
 
 ## 使い方

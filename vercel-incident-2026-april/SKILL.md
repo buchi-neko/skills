@@ -1,9 +1,14 @@
 ---
 name: vercel-incident-2026-april
 description: "Investigates and remediates exposure from the Vercel April 2026 security incident on any Vercel-linked project. Runs activity/webhook/env/integration audits, detects unauthorized actors, flags env vars that lack the 'sensitive' type, and produces a prioritized rotation plan. Use when the user mentions Vercel security incident, April 2026 incident, OAuth compromise, secret rotation on Vercel, or asks to audit a Vercel project for exposure. Also use when switching to a different project and needing to re-run the same incident response checks."
-user-invocable: true
-argument-hint: "[optional: project subdirectory]"
-allowed-tools: Bash, Read, Write, Edit, Grep, Glob
+license: MIT
+compatibility: "Designed for Claude Code. Requires Vercel CLI >= 51.0.0 and jq."
+allowed-tools: Bash Read Write Edit Grep Glob
+metadata:
+  author: buchi-neko
+  version: "1.0.0"
+  user-invocable: "true"
+  argument-hint: "[optional: project subdirectory]"
 ---
 
 # Vercel April 2026 Security Incident Response
